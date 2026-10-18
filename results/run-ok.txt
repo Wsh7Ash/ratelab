@@ -1,0 +1,18 @@
+ratelab report
+  target      http://127.0.0.1:8941/ok
+  profile     constant (100 req/s) for 3.0s, concurrency 64
+  requests    300 total, 0 failed (0.00%), 0 timeout(s)
+  wall        3.02s   achieved 99.3 req/s   0.000 MiB/s
+  scheduling  max in-flight 6/64
+
+  latency (ms)
+    min 6.0   p50 16.5   p90 18.1   p95 22.0   p99 43.1   max 54.0   mean 16.9   sd 4.9
+
+  statuses
+    200: 300
+
+  gates
+    PASS  p99Max <= 500 ms (actual 43.08)
+    PASS  errorRateMax <= 1 % (actual 0.00)
+    PASS  rpsMin <= 50 req/s (actual 99.34)
+exit=0

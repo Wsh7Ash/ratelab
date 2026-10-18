@@ -1,0 +1,16 @@
+ratelab report
+  target      http://127.0.0.1:8941/flaky
+  profile     constant (60 req/s) for 2.0s, concurrency 64
+  requests    120 total, 42 failed (35.00%), 0 timeout(s)
+  wall        2.02s   achieved 59.5 req/s   0.000 MiB/s
+  scheduling  max in-flight 3/64
+
+  latency (ms)
+    min 9.0   p50 17.0   p90 19.0   p95 24.1   p99 38.4   max 55.0   mean 17.6   sd 5.1
+
+  statuses
+    200: 78   500: 42
+
+  gates
+    FAIL  errorRateMax <= 1 % (actual 35.00)
+exit=1

@@ -1,0 +1,14 @@
+ratelab compare
+  baseline    http://127.0.0.1:8941/ok
+  candidate   http://127.0.0.1:8941/ok
+  threshold   +/- 40% counts as a regression
+
+    metric                baseline    candidate   delta     verdict
+    p50 (ms)              16.50       17.00       +3.0%     ok
+    p95 (ms)              22.00       24.00       +9.1%     ok
+    p99 (ms)              43.08       37.25       -13.5%    ok
+    throughput (req/s)    99.34       111.07      +11.8%    ok
+    error rate (%)        0.00        0.00        +0.0%     ok
+
+  OK: no regression beyond 40%
+exit=0

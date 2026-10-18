@@ -1,0 +1,62 @@
+{
+  "tool": "ratelab",
+  "version": "1.0.0",
+  "startedAt": "2026-10-18T05:07:31.384Z",
+  "profile": {
+    "type": "constant",
+    "durationMs": 2000,
+    "segments": [
+      {
+        "until": 2000,
+        "rps": 60
+      }
+    ]
+  },
+  "meta": {
+    "url": "http://127.0.0.1:8941/flaky",
+    "wallMs": 2017,
+    "endMs": 2000,
+    "concurrency": 64,
+    "maxInflight": 3,
+    "throttled": 0,
+    "requestTimeoutMs": 10000
+  },
+  "summary": {
+    "count": 120,
+    "failed": 42,
+    "timeouts": 0,
+    "errorRate": 0.35,
+    "statusCounts": {
+      "200": 78,
+      "500": 42
+    },
+    "latency": {
+      "min": 9,
+      "max": 55,
+      "mean": 17.608333333333334,
+      "stddev": 5.064783392438903,
+      "p50": 17,
+      "p90": 19,
+      "p95": 24.14999999999999,
+      "p99": 38.43000000000001
+    },
+    "throughput": {
+      "wallMs": 2017,
+      "rps": 59.494298463063956,
+      "bytesTotal": 576,
+      "mibPerSec": 0.00027234328520079324
+    }
+  },
+  "gates": {
+    "passed": false,
+    "checks": [
+      {
+        "name": "errorRateMax",
+        "unit": "%",
+        "limit": 1,
+        "actual": 35,
+        "ok": false
+      }
+    ]
+  }
+}

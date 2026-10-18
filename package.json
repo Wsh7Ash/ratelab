@@ -1,0 +1,25 @@
+{
+  "name": "ratelab",
+  "version": "1.0.0",
+  "description": "Offline-first HTTP load testing CLI: open-model scheduling, latency percentiles, SLO gate checks and run-to-run regression compare. Standard library only.",
+  "type": "module",
+  "bin": {
+    "ratelab": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "load-testing",
+    "benchmark",
+    "performance",
+    "slo",
+    "latency",
+    "cli"
+  ],
+  "license": "MIT"
+}

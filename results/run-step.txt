@@ -1,0 +1,13 @@
+ratelab report
+  target      http://127.0.0.1:8941/ok
+  profile     step (25 req/s -> 83.33333333333334 req/s -> 141.66666666666669 req/s -> 200 req/s) for 3.0s, concurrency 64
+  requests    336 total, 0 failed (0.00%), 0 timeout(s)
+  wall        3.02s   achieved 111.1 req/s   0.000 MiB/s
+  scheduling  max in-flight 10/64
+
+  latency (ms)
+    min 6.0   p50 17.0   p90 19.0   p95 24.0   p99 37.2   max 51.0   mean 16.8   sd 4.7
+
+  statuses
+    200: 336
+exit=0

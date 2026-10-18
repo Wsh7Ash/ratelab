@@ -1,0 +1,75 @@
+{
+  "tool": "ratelab",
+  "version": "1.0.0",
+  "startedAt": "2026-10-18T05:07:23.766Z",
+  "profile": {
+    "type": "constant",
+    "durationMs": 3000,
+    "segments": [
+      {
+        "until": 3000,
+        "rps": 100
+      }
+    ]
+  },
+  "meta": {
+    "url": "http://127.0.0.1:8941/ok",
+    "wallMs": 3020,
+    "endMs": 3000,
+    "concurrency": 64,
+    "maxInflight": 6,
+    "throttled": 0,
+    "requestTimeoutMs": 10000
+  },
+  "summary": {
+    "count": 300,
+    "failed": 0,
+    "timeouts": 0,
+    "errorRate": 0,
+    "statusCounts": {
+      "200": 300
+    },
+    "latency": {
+      "min": 6,
+      "max": 54,
+      "mean": 16.856666666666666,
+      "stddev": 4.886277511078662,
+      "p50": 16.5,
+      "p90": 18.100000000000023,
+      "p95": 22,
+      "p99": 43.07999999999993
+    },
+    "throughput": {
+      "wallMs": 3020,
+      "rps": 99.33774834437087,
+      "bytesTotal": 600,
+      "mibPerSec": 0.00018947171849130796
+    }
+  },
+  "gates": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "p99Max",
+        "unit": "ms",
+        "limit": 500,
+        "actual": 43.07999999999993,
+        "ok": true
+      },
+      {
+        "name": "errorRateMax",
+        "unit": "%",
+        "limit": 1,
+        "actual": 0,
+        "ok": true
+      },
+      {
+        "name": "rpsMin",
+        "unit": "req/s",
+        "limit": 50,
+        "actual": 99.33774834437087,
+        "ok": true
+      }
+    ]
+  }
+}

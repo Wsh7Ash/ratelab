@@ -1,0 +1,61 @@
+{
+  "tool": "ratelab",
+  "version": "1.0.0",
+  "startedAt": "2026-10-18T05:07:25.930Z",
+  "profile": {
+    "type": "constant",
+    "durationMs": 2000,
+    "segments": [
+      {
+        "until": 2000,
+        "rps": 50
+      }
+    ]
+  },
+  "meta": {
+    "url": "http://127.0.0.1:8941/error",
+    "wallMs": 2013,
+    "endMs": 2000,
+    "concurrency": 64,
+    "maxInflight": 2,
+    "throttled": 0,
+    "requestTimeoutMs": 10000
+  },
+  "summary": {
+    "count": 100,
+    "failed": 100,
+    "timeouts": 0,
+    "errorRate": 1,
+    "statusCounts": {
+      "500": 100
+    },
+    "latency": {
+      "min": 13,
+      "max": 29,
+      "mean": 16.74,
+      "stddev": 1.750151508592985,
+      "p50": 17,
+      "p90": 17,
+      "p95": 18.049999999999997,
+      "p99": 24.050000000000026
+    },
+    "throughput": {
+      "wallMs": 2013,
+      "rps": 49.67709885742673,
+      "bytesTotal": 400,
+      "mibPerSec": 0.00018950309317560855
+    }
+  },
+  "gates": {
+    "passed": false,
+    "checks": [
+      {
+        "name": "errorRateMax",
+        "unit": "%",
+        "limit": 1,
+        "actual": 100,
+        "ok": false
+      }
+    ]
+  }
+}

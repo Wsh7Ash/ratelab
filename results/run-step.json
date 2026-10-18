@@ -1,0 +1,65 @@
+{
+  "tool": "ratelab",
+  "version": "1.0.0",
+  "startedAt": "2026-10-18T05:07:29.127Z",
+  "profile": {
+    "type": "step",
+    "durationMs": 3000,
+    "segments": [
+      {
+        "until": 750,
+        "rps": 25
+      },
+      {
+        "until": 1500,
+        "rps": 83.33333333333334
+      },
+      {
+        "until": 2250,
+        "rps": 141.66666666666669
+      },
+      {
+        "until": 3000,
+        "rps": 200
+      }
+    ]
+  },
+  "meta": {
+    "url": "http://127.0.0.1:8941/ok",
+    "wallMs": 3025,
+    "endMs": 3000,
+    "concurrency": 64,
+    "maxInflight": 10,
+    "throttled": 0,
+    "requestTimeoutMs": 10000
+  },
+  "summary": {
+    "count": 336,
+    "failed": 0,
+    "timeouts": 0,
+    "errorRate": 0,
+    "statusCounts": {
+      "200": 336
+    },
+    "latency": {
+      "min": 6,
+      "max": 51,
+      "mean": 16.767857142857142,
+      "stddev": 4.708167833635517,
+      "p50": 17,
+      "p90": 19,
+      "p95": 24,
+      "p99": 37.249999999999886
+    },
+    "throughput": {
+      "wallMs": 3025,
+      "rps": 111.07438016528926,
+      "bytesTotal": 672,
+      "mibPerSec": 0.00021185756714876033
+    }
+  },
+  "gates": {
+    "passed": true,
+    "checks": []
+  }
+}

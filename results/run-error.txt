@@ -1,0 +1,16 @@
+ratelab report
+  target      http://127.0.0.1:8941/error
+  profile     constant (50 req/s) for 2.0s, concurrency 64
+  requests    100 total, 100 failed (100.00%), 0 timeout(s)
+  wall        2.01s   achieved 49.7 req/s   0.000 MiB/s
+  scheduling  max in-flight 2/64
+
+  latency (ms)
+    min 13.0   p50 17.0   p90 17.0   p95 18.0   p99 24.1   max 29.0   mean 16.7   sd 1.8
+
+  statuses
+    500: 100
+
+  gates
+    FAIL  errorRateMax <= 1 % (actual 100.00)
+exit=1
